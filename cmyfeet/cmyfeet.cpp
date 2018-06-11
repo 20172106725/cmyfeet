@@ -13,7 +13,7 @@ public:
 	CFeet();
 	void setfeet(int f);
 	void setinches(int ich);
-	vivoid display();
+	void display();
 	int getfeet();
 	int getinches();
 };
@@ -28,12 +28,12 @@ void CFeet::setfeet(int f)
 }
 void CFeet::setinches(int ich)
 {
-	inches = ich%12;
+	inches = ich % 12;
 	feet = feet + inches / 12;
 }
 void CFeet::display()
 {
-	cout << "" << feet << "" << inches << "" << endl;
+	cout << "»ùÀà" << feet << "Ó¢³ß" << inches << "Ó¢´ç" << endl;
 }
 int CFeet::getfeet()
 {
@@ -43,18 +43,23 @@ int CFeet::getinches()
 {
 	return inches;
 }
-class CMyfeet :: public CFeet
+class CMyFeet : public CFeet
 {
 public:
 	void display();
 };
-void CMyfeet::display()
+void CMyFeet::display()
 {
-	cout 
+	cout << "ÅÉÉúÀà" << feet << "Ó¢³ß" << inches << "Ó¢´ç" << endl;
 }
 
 int main()
 {
+	CFeet *p;
+	p = new CMyFeet;
+	p->setfeet(3);
+	p->setinches(8);
+	p->display();
     return 0;
 }
 
