@@ -7,13 +7,13 @@ using namespace std;
 class CFeet
 {
 protected:
-	int feet;
+	int feet; 
 	int inches;
 public:
 	CFeet();
 	void setfeet(int f);
 	void setinches(int ich);
-	void display();
+	virtual void display();
 	int getfeet();
 	int getinches();
 };
@@ -60,6 +60,7 @@ int main()
 	p->setfeet(3);
 	p->setinches(8);
 	p->display();
+	p->CFeet::display();
     return 0;
 }
 
